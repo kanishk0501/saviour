@@ -11,7 +11,10 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  var usersRef = firebase.database().ref('Users');
+
+
+
 // google Authentication 
   function onSignIn(googleUser) {
     // Useful data for your client-side scripts:
@@ -22,10 +25,31 @@
     var ID = profile.getId(); // unique ID
     var Name = profile.getName(); // full name
     var givenName = profile.getGivenName(); // first name
-    var Image = profile.getImageUrl(); // 
+    var Image = profile.getImageUrl();
     var email = profile.getEmail();
     var id_token = googleUser.getAuthResponse().id_token; // token goes to FireBase
-  }
+    
+
+    //sending data to firebase
+    
+    usersRef.push ({
+       userid:ID,
+       name:Name,
+       firstName:givenName,
+       profilePic: Image,
+       email:email,
+       userId:id_token
+    });
+    
+    
+
+    
+
+
+
+
+
+}
 
   function signOut()
   {
@@ -36,3 +60,5 @@
       var bt=document.getElementById('sgnoutbt');
         bt.style.display="none";
   }
+
+  
