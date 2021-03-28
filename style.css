@@ -3,5 +3,40 @@
     display: none;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 
+.qw
+{
+    display: flex;
+    flex-direction: row;
+}
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box {
+    height: 100px;
+    width: 200px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    border: 3px solid black;
+  }
+
+  .box1 {
+    height: auto;
+    width: 50%;
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    position: relative;
+    text-align: left;
+    border: 3px solid black;
+  }
+  

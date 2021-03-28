@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="857165456979-n86hg6msuil9lhoj1i4s7l53ulj8iutv.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1>Personal Details</h1>
+            <form action="" method="POST" id="personalDetails">
+                <label for="age">Your Age:</label>
+                <input id="age" type="text" name="age" required /><br><br>
+
+                <label for="gender">Gender :</label>
+                <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Non-Binary">Non-Binary</option>
+                <option value="Others">Others</option>
+                </select><br><br>
+
+
+                <label for="birthday">Date of Birth:</label>
+                <input type="date" id="birthday" name="birthday" required><br><br>
+
+                <label for="">Phone Number:</label>
+                <input id="ph_No" type="text" name="ph_no" required/><br><br>
+
+                <label for="">Guardian's Name:</label>
+                <input id="guardName" type="text" name="guardName" required/><br><br>
+
+                <label for="">Emergency Contacts</label>
+                <input id="emcnt1" type="text" placeholder="Contact 1" name="emcnt1"/><br><br>
+                <input id="emcnt2" type="text" placeholder="Contact 2" name="emcnt2"/><br><br>
+                <input id="emcnt3" type="text" placeholder="Contact 3" name="emcnt3"/><br><br>
+
+                <label for="">Permanent Address</label><br>
+                <textarea class="message" name="address" id="address" cols="40" rows="10" required></textarea><br><br>
+
+                <label for="myfile">Government Approved ID</label>
+                <input type="file" id="govtId" name="govtId" required><br><br>
+
+                <label for="myfile">Medical Insurance</label>
+                <input type="file" id="medIns" name="medIns" required><br><br>
+
+                <button type="submit" sendMessage()>Submit</button>
+              </form>
+           
+        </div>
+      </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="857165456979-n86hg6msuil9lhoj1i4s7l53ulj8iutv.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1>Medical History</h1>
+            <form action="" method="POST" id="medicalDetails">
+                <label for="phyExamDate">Date of most recent Physical Examination:</label>
+                <input type="date" id="phyExamDate" name="phyExamDate" required><br><br>
+
+                <label for="ques1">Are you aware of any current health problem? </label>
+                <select id="ques1" name="ques1" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br>
+
+                <label for="ques2">Are you under any medical care or taking any medications? </label>
+                <select id="ques2" name="ques2" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select><br><br>
+
+                <label for="healthProb">In the last six months, have any of these happened: </label>
+                <select id="healthProb" name="healthProb" required>
+                    <option value="Surgery">Surgery</option>
+                    <option value="Illness">Illness</option>
+                    <option value="Allergies">Allergies</option>
+                    <option value="Other Changes">Other Changes</option>
+                    <option value="none">None</option>
+                </select><br><br>
+
+                
+
+                <label for="hosp">If any recent hospitalizations or serious injuries (please specify with date):</label>
+                <input id="hosp" type="text" name="hosp" /><br><br>
+
+                <label for="currMed">Current Medications:</label>
+                <input id="currMed1" type="text" name="currMed1" />
+                <input id="currMed2" type="text" name="currMed2" />
+                <input id="currMed3" type="text" name="currMed3" /><br><br>
+
+                <p>Chronic or recurring conditions:</p>
+                <input type="checkbox" id="cond1" name="cond1" value="Asthama">
+                <label for="asthma">Asthma </label><br>
+                <input type="checkbox" id="cond2" name="cond2" value="Bleeding Disorders">
+                <label for="Bleeding Disorders"> Bleeding Disorders</label><br>
+                <input type="checkbox" id="cond3" name="cond3" value="Convulsions/ Seizures">
+                <label for="Convulsions/ Seizures"> Convulsions/ Seizures</label><br>
+                <input type="checkbox" id="cond4" name="cond4" value="Diabetes">
+                <label for="Diabetes">Diabetes</label><br>
+                <input type="checkbox" id="cond5" name="cond5" value="Ear Infections">
+                <label for="Ear Infections">Ear Infections</label><br>
+                <input type="checkbox" id="cond6" name="cond6" value="Emotional/ Behavioural Disturbances">
+                <label for="Emotional/ Behavioural Disturbances">Emotional/ Behavioural Disturbances</label><br>
+                <input type="checkbox" id="cond7" name="cond7" value="Hypertension">
+                <label for="Hypertension">Hypertension</label><br>
+                <label for="">If any other (please mention):</label>
+                <input id="cond8" type="cond8" name="cond8"/><br><br>
+
+                <label for="geneticDisorders">Genetic Disorders: </label>
+                <input id="geneDisorder" type="text" name="geneDisorder"/><br><br>
+
+                <p>Special Needs</p>
+                <label for="">Dietary: </label>
+                <input id="Diet" type="text" name="Diet" /><br><br>
+                <label for="">Physical: </label>
+                <input id="phys" type="text" name="phys" /><br><br>
+
+                <p>Allergies:</p>
+                <input type="checkbox" id="allergie1" name="allergie1" value="Animals">
+                <label for="animals">Animals </label><br>
+                <input type="checkbox" id="allergie2" name="allergie2" value="Food">
+                <label for="Food"> Food</label><br>
+                <input type="checkbox" id="allergie3" name="allergie3" value="Plants">
+                <label for="plants">Plants</label><br>
+                <input type="checkbox" id="allergie4" name="allergie4" value="Pollen">
+                <label for="Pollen">Pollen</label><br>
+                <input type="checkbox" id="allergie5" name="allergie5" value="Medicine/ Drugs">
+                <label for="Medicine_drugs">Medicine/ Drugs</label><br>
+                <input type="checkbox" id="allergie6" name="allergie6" value="Others">
+                <label for="Others">Others</label><br>
+                <label for="">Give Details about the allergies:</label>
+                <input id="allerDet" type="text" name="allerDet" style="position:relative;float: right;"/><br><br>
+
+
+                
+                <button type="submit" sendMessage1()>Submit</button>
+              </form>
+           
+        </div>
+      </div>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="index.js"></script>
+</html>
