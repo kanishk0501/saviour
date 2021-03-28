@@ -42,12 +42,18 @@
                 <label for="">Permanent Address</label><br>
                 <textarea class="message" name="address" id="address" cols="40" rows="10" required></textarea><br><br>
 
-                <label for="myfile">Government Approved ID</label>
-                <input type="file" id="govtId" name="govtId" required><br><br>
-
-                <label for="myfile">Medical Insurance</label>
-                <input type="file" id="medIns" name="medIns" required><br><br>
-
+                <label for="myfile">Government Approved ID</label><br>
+                <input type="file" id="govtID" name="govtID" required multiple /><br><br>
+                <button id="send">Upload</button>
+                <p id="uploading"></p>
+                <progress value="0" max="100" id="progress"></progress><br><br>
+                
+                <label for="myfile">Government Approved ID</label><br>
+                <input type="file" id="medIns" name="medIns" required multiple /><br><br>
+                <button id="send">Upload</button>
+                <p id="uploading"></p>
+                <progress value="0" max="100" id="progress"></progress><br><br>
+                
                 <button type="submit" sendMessage()>Submit</button>
               </form>
            
@@ -56,5 +62,6 @@
 </body>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>       
 <script src="index.js"></script>
 </html>

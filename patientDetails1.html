@@ -12,7 +12,10 @@
     <div class="container">
         <div class="box1">
             <h1>Medical History</h1>
-            <form action="" method="POST" id="medicalDetails">
+            <form action="" method="POST" id="medDetails">
+                <label for="">Your blood Type:</label>
+                <input id="BloodType" type="text" name="BloodType"/><br><br>
+
                 <label for="phyExamDate">Date of most recent Physical Examination:</label>
                 <input type="date" id="phyExamDate" name="phyExamDate" required><br><br>
 
@@ -43,24 +46,24 @@
                 <input id="hosp" type="text" name="hosp" /><br><br>
 
                 <label for="currMed">Current Medications:</label>
-                <input id="currMed1" type="text" name="currMed1" />
-                <input id="currMed2" type="text" name="currMed2" />
+                <input id="currMed1" type="text" name="currMed1" /><br>
+                <input id="currMed2" type="text" name="currMed2" /><br>
                 <input id="currMed3" type="text" name="currMed3" /><br><br>
 
                 <p>Chronic or recurring conditions:</p>
-                <input type="checkbox" id="cond1" name="cond1" value="Asthama">
+                <input type="checkbox" id="cond1" name="cond1" onclick="value='Asthama'">
                 <label for="asthma">Asthma </label><br>
-                <input type="checkbox" id="cond2" name="cond2" value="Bleeding Disorders">
+                <input type="checkbox" id="cond2" name="cond2" onclick="value='Bleeding Disorders'">
                 <label for="Bleeding Disorders"> Bleeding Disorders</label><br>
-                <input type="checkbox" id="cond3" name="cond3" value="Convulsions/ Seizures">
+                <input type="checkbox" id="cond3" name="cond3" onclick="value='Convulsions/ Seizures'">
                 <label for="Convulsions/ Seizures"> Convulsions/ Seizures</label><br>
-                <input type="checkbox" id="cond4" name="cond4" value="Diabetes">
+                <input type="checkbox" id="cond4" name="cond4" onclick="value='Diabetes'">
                 <label for="Diabetes">Diabetes</label><br>
-                <input type="checkbox" id="cond5" name="cond5" value="Ear Infections">
+                <input type="checkbox" id="cond5" name="cond5" onclick="value='Ear Infections'">
                 <label for="Ear Infections">Ear Infections</label><br>
-                <input type="checkbox" id="cond6" name="cond6" value="Emotional/ Behavioural Disturbances">
+                <input type="checkbox" id="cond6" name="cond6" onclick="value='Emotional/ Behavioural Disturbances'">
                 <label for="Emotional/ Behavioural Disturbances">Emotional/ Behavioural Disturbances</label><br>
-                <input type="checkbox" id="cond7" name="cond7" value="Hypertension">
+                <input type="checkbox" id="cond7" name="cond7" onclick="value='Hypertension'">
                 <label for="Hypertension">Hypertension</label><br>
                 <label for="">If any other (please mention):</label>
                 <input id="cond8" type="cond8" name="cond8"/><br><br>
@@ -74,25 +77,25 @@
                 <label for="">Physical: </label>
                 <input id="phys" type="text" name="phys" /><br><br>
 
-                <p>Allergies:</p>
-                <input type="checkbox" id="allergie1" name="allergie1" value="Animals">
+               <!--<p>Allergies:</p>
+                <input type="checkbox" id="a1" name="a1" value="Animals">
                 <label for="animals">Animals </label><br>
-                <input type="checkbox" id="allergie2" name="allergie2" value="Food">
+                <input type="checkbox" id="a2" name="a2" value="Food">
                 <label for="Food"> Food</label><br>
-                <input type="checkbox" id="allergie3" name="allergie3" value="Plants">
+                <input type="checkbox" id="a3" name="a3" value="Plants">
                 <label for="plants">Plants</label><br>
-                <input type="checkbox" id="allergie4" name="allergie4" value="Pollen">
+                <input type="checkbox" id="a4" name="a4" value="Pollen">
                 <label for="Pollen">Pollen</label><br>
-                <input type="checkbox" id="allergie5" name="allergie5" value="Medicine/ Drugs">
+                <input type="checkbox" id="a5" name="a5" value="Medicine/ Drugs">
                 <label for="Medicine_drugs">Medicine/ Drugs</label><br>
-                <input type="checkbox" id="allergie6" name="allergie6" value="Others">
-                <label for="Others">Others</label><br>
-                <label for="">Give Details about the allergies:</label>
+                <input type="checkbox" id="a6" name="a6" value="Others">
+                <label for="Others">Others</label><br>-->
+                <label for="">Give Details about allergies (if any):</label>
                 <input id="allerDet" type="text" name="allerDet" style="position:relative;float: right;"/><br><br>
 
 
                 
-                <button type="submit" sendMessage1()>Submit</button>
+                <button type="submit" sendMessage()>Submit</button>
               </form>
            
         </div>
@@ -100,5 +103,6 @@
 </body>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-<script src="index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>       
+<script src="form.js"></script>
 </html>
